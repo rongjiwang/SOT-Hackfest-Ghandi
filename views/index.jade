@@ -1,5 +1,81 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .row
+      .span12
+        .widget.stacked.widget-table.action-table
+          .page-header
+            h1
+              | Listing Suburbs
+          .row
+            .span2.side-by-side.clearfix
+            .span3.side-by-side.clearfix.offset4
+              form(action='/search', method='get')
+                .input-group
+                  input#system-search.form-control(name='',value='', placeholder='Search for', required='')
+                  span.input-group-btn
+                    button.btn.btn-default(type='submit', data-original-title='', title='')
+                      i.glyphicon.glyphicon-search
+
+          br
+          br
+          .widget-content
+            table.table.table-striped.table-bordered
+              thead
+                tr
+                  th#table_id
+                    | ID
+                  th(id='')
+                    | Address
+                  th(id='')
+                    | Suburb Name
+                  th(id='')
+                    | Properties
+                  th(id='')
+                    | Trademe Avg Rent
+                  th(id='')
+                    | Official Avg Rent
+                  th(id='')
+                    | Diff
+                  th(id='')
+                    | Rating
+                  th(id='')
+                    | View
+
+              tbody
+                for prop, i in properties
+                  tr
+                    td #{++i}
+                    td #{prop[0]}
+                    td #{prop[1]}
+                    td #{prop[2]}
+                    td #{prop[3]}
+                    td TODO
+                    td TODO
+                    td TODO
+                    td.td-actions
+                      a.btn.btn-default.btn-xs(href='javascript:;')
+                        span.glyphicon.glyphicon-search
+                        |  View
+          // /widget-content
+          .row
+            .col-md-12
+              ul.pagination.pagination-sm.pull-left
+                li.disabled
+                  a(href='javascript:void(0)') «
+                li.active
+                  a(href='javascript:void(0)')
+                    | 1
+                    span.sr-only (current)
+                li
+                  a(href='#') 2
+                li
+                  a(href='#') 3
+                li
+                  a(href='#') 4
+                li
+                  a(href='#') 5
+                li
+                  a(href='javascript:void(0)') »
+

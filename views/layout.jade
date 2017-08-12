@@ -1,7 +1,58 @@
 doctype html
-html
+html(lang='en')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.css')
+
+    .masthead
+      h3.text-muted Worth-It?
+      nav
+        ul.nav.nav-justified
+          li.active
+            a(href='#') Wellington
+          li
+            a(href='#') Auckland
+          li
+            a(href='#') Christchurch
+
+    body
+      .container
+        br
+        block content
+
+        script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous")
+        script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous")
+
+    footer
+      .footerHeader
+      .container
+        .col-md-4
+          h3 About us
+          p
+            | SOT Hackfest projects
+        .col-md-4
+          h3 Our Location
+          iframe(src='https://www.google.com/maps/embed/v1/view?key=AIzaSyCfXyPTgugzVJkgWJ42Apv_Rwvkm3L3yE8&center=-41.3062178,174.7770671&zoom=18&maptype=satellite', sytle='', frameborder='0', style='border:0', allowfullscreen='')
+        .col-md-4
+          h3 Contact Us
+          ul
+            li Phone : 123 - 456 - 789
+            li E-mail : info@rongji.com
+            li Fax : 123 - 456 - 789
+          p
+            | Project = Eat->Drink->Code->Project. :-)
+          ul.sm
+            li
+              a(href='#')
+                img.img-responsive(src='https://www.facebook.com/images/fb_icon_325x325.png')
+            li
+              a(href='#')
+                img.img-responsive(src='https://lh3.googleusercontent.com/00APBMVQh3yraN704gKCeM63KzeQ-zHUi5wK6E9TjRQ26McyqYBt-zy__4i8GXDAfeys=w300')
+            li
+              a(href='#')
+                img.img-responsive(src='http://playbookathlete.com/wp-content/uploads/2016/10/twitter-logo-4.png')

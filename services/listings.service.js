@@ -5,13 +5,7 @@ const trademeKey = {
   consumerSecret: "1695A123465C11F5B85808A5E6EB4A73"
 };
 
-//const trademeApiUrl1 = 'https://api.tmsandbox.co.nz/v1/Search/General.json';
-//const trademeApiUrl2 = 'https://api.tmsandbox.co.nz/v1/TmAreas.json';
-//const trademeApiUrl3 = 'https://api.trademe.co.nz/v1/Localities/Regions.json';
-//const trademeApiUrl4 = https://api.trademe.co.nz/v1/Search/Property/Rental.{file_format};
-
 var search = '/Search/Property/Rental.json?region=15';
-
 const trademeApiUrl = `https://api.tmsandbox.co.nz/v1/${search}`;
 
 var options = {
