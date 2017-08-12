@@ -5,8 +5,7 @@ var listingsService = require('../services/listings.service');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     listingsService.getListings(function(data) {
-        var newData = parseData(data);
-        //var _calculateMedRent = calculateMedRent(newData);
+        var newData = parseTMData(data);
         res.render('index', { properties: newData });
     });
 });
@@ -15,16 +14,11 @@ router.get('/search', (req,res,next)=>{
   console.log(req.body.name);
 });
 
-function calculateMedRent(data){
-  for(var i=0; i<data.length; i++){
-    console.log(data[i]);
-  }
-}
 
-function parseData(data) {
+function parseTMData(data) {
     var filtered_data = {};
     var list = data.List;
-    var tradeMeObj = calcAvgRent(data, 'Wellington');
+    var tradeMeObj = getJSON(data, 'Wellington');
     for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
@@ -71,4 +65,10 @@ function getJSON(data, region) {
 
 
 }
+
+function compareData(data){
+
+}
+
+
 module.exports = router;
