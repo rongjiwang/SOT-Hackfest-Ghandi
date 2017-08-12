@@ -24,7 +24,7 @@ function calculateMedRent(data){
 function parseData(data) {
     var filtered_data = {};
     var list = data.List;
-    calcAvgRent(data, 'Wellington');
+    var tradeMeObj = calcAvgRent(data, 'Wellington');
     for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
@@ -38,8 +38,7 @@ function parseData(data) {
     return filtered_data;
 }
 
-function calcAvgRent(data, district) {
-    var avgRent = new Map();
+function getJSON(data, region) {
     var suburbData = new Map();
 
     for(var i = 0; i< data.List.length; i++){
@@ -60,14 +59,16 @@ function calcAvgRent(data, district) {
         suburbData.set(suburb, obj);
 
     }
-
+    var areas = [];
 
     suburbData.forEach(function (item, key, mapObj) {
         var avg = (item.rentSum / item.count);
-        avgRent.set(key, Math.round(avg));
+        var area = {suburb: key, avg: avg};
+        areas.push(area);
     });
 
-    return avgRent;
+    return {region: region, areas: areas};
+
 
 }
 module.exports = router;
