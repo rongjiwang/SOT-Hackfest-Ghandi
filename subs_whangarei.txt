@@ -1,0 +1,13 @@
+North West Rural,
+Morningside,
+Raumanga,
+Maunu,
+Ngunguru,
+Onerahi,
+Whangarei Heads,
+Waipu,
+Whangarei Central,
+Otangarei,
+Kamo,
+Tikipunga,
+Kensington

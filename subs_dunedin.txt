@@ -1,0 +1,27 @@
+Musselburgh
+,Vauxhall
+,Peninsula
+,North East Valley
+,Pinehill
+,Kenmure
+,Mornington
+,Ravenbourne
+,Mt Mera
+,Port ChalmeGlenleith
+,Roslyn
+,Belleknowles
+,Kew/St Clair
+,St Kilda East
+,Central Dunedin
+,Rural
+,Caversham
+,North Dunedin
+,Woodhaugh
+,Mosgiel
+,South Dunedin
+,St Kilda
+,University
+,Maori Hill
+,Sunnyvale
+,Abbotsford
+,Burnside
