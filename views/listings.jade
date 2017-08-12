@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  ul
+    each prop in properties
+        li
+            a(href="http://tmsandbox.co.nz/#{prop.localityId}") #{prop.Name}
