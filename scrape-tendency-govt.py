@@ -57,9 +57,9 @@ for city in city_list:
         else:
             continue
         prices = get_pricing(d)
-        area_obj = {'name': area, 'bond': prices[0], 'lower': prices[1], 'median': prices[2], 'upper': prices[3]}
+        area_obj = {'suburb': area, 'bond': prices[0], 'lower': prices[1], 'median': prices[2], 'upper': prices[3]}
         areas_list.append(area_obj)
-    city_obj = {'name': city,'areas': areas_list}
+    city_obj = {'region': city,'areas': areas_list}
     cities.append(city_obj)
 
 jsonFile = open('data.json', 'w')
