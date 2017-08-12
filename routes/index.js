@@ -5,7 +5,6 @@ var listingsService = require('../services/listings.service');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     listingsService.getListings(function(data) {
-        console.log(data);
         var newData = parseData(data);
         //var _calculateMedRent = calculateMedRent(newData);
         res.render('index', { properties: newData });
@@ -25,6 +24,7 @@ function calculateMedRent(data){
 function parseData(data) {
     var filtered_data = {};
     var list = data.List;
+    calcAvgRent(data, 'Wellington');
     for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
@@ -38,4 +38,36 @@ function parseData(data) {
     return filtered_data;
 }
 
+function calcAvgRent(data, district) {
+    var avgRent = new Map();
+    var suburbData = new Map();
+
+    for(var i = 0; i< data.List.length; i++){
+        var suburb = data.List[i].Suburb;
+        var rent = data.List[i].RentPerWeek;
+        var count = 0;
+        var sum = 0;
+        var obj = {count: count, rentSum: sum}
+
+        if(suburbData.get(suburb) != null){
+            count = suburbData.get(suburb).count;
+            sum = suburbData.get(suburb).rentSum;
+        }
+
+        obj.count = count + 1;
+        obj.rentSum = sum + rent;
+
+        suburbData.set(suburb, obj);
+
+    }
+
+
+    suburbData.forEach(function (item, key, mapObj) {
+        var avg = (item.rentSum / item.count);
+        avgRent.set(key, Math.round(avg));
+    });
+
+    return avgRent;
+
+}
 module.exports = router;
