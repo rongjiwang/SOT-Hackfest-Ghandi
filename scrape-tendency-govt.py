@@ -25,7 +25,7 @@ sub_list_auckland = ['Royal Oak', '']
 
 for c in city_list:
     f = open("subs_"+c+".txt","r")
-    for sub in f.split(",")
+    for sub in f.split(","):
         tendencyURL = "https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/?location=newlands&period=60&action_doSearchValues=Find+Rent"
 
 

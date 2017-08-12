@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcf0c6d6-70bb-44c7-b230-56f60b16d45c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_aukland.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_christchurch.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_hamilton.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_hastings.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_invercargill.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_napier.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_nply.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_rotorua.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_whangarei.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_gisborne.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_nelson.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_palmerston north.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/subs_wellington.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scrape-tendency-govt.py" afterPath="$PROJECT_DIR$/scrape-tendency-govt.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/subs_dunedin.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/subs_nply.txt" afterPath="$PROJECT_DIR$/subs_new plymouth.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="scrape-tendency-govt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="scrape-tendency-govt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scrape-tendency-govt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="260">
+              <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -39,31 +34,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="subs_hastings.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/subs_hastings.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subs_napier.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/subs_napier.txt">
+      <file leaf-file-name="subs_gisborne.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/subs_gisborne.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="17" lean-forward="false" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="subs_invercargill.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/subs_invercargill.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -81,6 +59,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>/</find>
+      <find>&quot;</find>
+      <find>'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -99,7 +79,11 @@
         <option value="$PROJECT_DIR$/subs_inver.txt" />
         <option value="$PROJECT_DIR$/subs_nap" />
         <option value="$PROJECT_DIR$/subs_hastings.txt" />
+        <option value="$PROJECT_DIR$/subs_wellington.txt" />
+        <option value="$PROJECT_DIR$/subs_nelson.txt" />
+        <option value="$PROJECT_DIR$/subs_palmerston north.txt" />
         <option value="$PROJECT_DIR$/scrape-tendency-govt.py" />
+        <option value="$PROJECT_DIR$/subs_gisborne.txt" />
       </list>
     </option>
   </component>
@@ -293,15 +277,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/subs_aukland.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/subs_nply.txt">
+    <entry file="file://$PROJECT_DIR$/subs_new plymouth.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
@@ -357,13 +333,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/subs_wellington.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subs_aukland.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subs_nelson.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subs_palmerston north.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scrape-tendency-govt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="260">
+          <caret line="26" column="34" lean-forward="true" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/subs_gisborne.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <caret line="1" column="14" lean-forward="false" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
