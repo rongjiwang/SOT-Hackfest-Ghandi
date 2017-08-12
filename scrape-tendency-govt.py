@@ -40,7 +40,7 @@ for c in city_list:
     file = f.read()
 
     for sub in re.sub("\W+", " ", file).split(" "):
-        tendencyURL = "https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/?location="+sub+"&period=60&action_doSearchValues=Find+Rent"
+        tendencyURL = "https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/?location="+c+"&period=60&action_doSearchValues=Find+Rent"
 
 
         page = request.urlopen(tendencyURL)
@@ -60,20 +60,21 @@ for c in city_list:
                     break
 
         if areas != [] and str(areas) not in visited:
-            data += "areas: ["
+            data += "{areas: ["
             prices = list()
             for line in generalData.findAll("span"):
                 prices.append(line.string.replace("$", ""))
             for area in areas:
-                data += "{" \
-                        "name : {}" \
-                       "bonds : {}," \
-                       "lower: {}," \
-                       "median: {}," \
-                       "upper: {}" \
-                       "},".format(area,prices[0],prices[1],prices[2],prices[3])
+                data += "{"
+                data += "name : {0}" \
+                       "bonds : {1}," \
+                       "lower: {2}," \
+                       "median: {3}," \
+                       "upper: {4}".format(area,prices[0],prices[1],prices[2],prices[3])
+                data +=  "},"
+                data += "],"
+            data += "},"
             visited.add(str(areas))
-            data += "],"
     data += "],"
 data += "}"
 
