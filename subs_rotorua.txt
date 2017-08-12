@@ -1,5 +1,5 @@
 Holdens Bay/Owhata/Ngapuna
-,Rural Rotorua
-,Ngongotaha/Pleasant Heights/Koutu
-,Pukehangi South/Springfield
-,Kuirau/Hillcrest/Glenholme
+Rural Rotorua
+Ngongotaha/Pleasant Heights/Koutu
+Pukehangi South/Springfield
+Kuirau/Hillcrest/Glenholm

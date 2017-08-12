@@ -1,67 +1,66 @@
 Redcliffs
-,Sumner
-,Avon Loop
-,Christchurch East
-,Marshland
-,Redwood
-,Fendalton
-,Strowan
-,Bryndwr
-,St Martins
-,Beckenham
-,Huntsbury
-,Ilam
-,Westburn
-,Christchurch Central
-,Hagley
-,Styx
-,Parklands
-,St Albans North
-,Mairehau
-,Sydenham
-,Waltham
-,Hornby
-,Islington
-,Hei Hei
-Addington
-,Sawyers Arms
-,Northcote
-,Belfast
-,North Beach
-,New Brighton
-,Southshore
-,Merivale
-,St Albans West
-,Linwood
-,Phillipstown
-,Halswell
-,Wigram
-,Hillmorton
-,Hoon Hay
-,Bishopdale
-,Papanui
-,Aranui
-,Bromley
-,Bexley
-,St Albans East
-,Edgeware
-,Richmond
-,Avonside
-,Sockburn
-,Upper Riccarton
-,Spreydon
-,Somerfield
-,Burnside
-,Harewood
-,Woolston
-,Opawa
-,Richmond
-,Shirley
-,Burwood
-,Dallington
-,Avondale
-,Riccarton
-,Westmorland
-,Cashmere
-,Barrington
-,Avonside
+Sumner
+Avon Loop
+Christchurch East
+Marshland
+Redwood
+Fendalton
+Strowan
+Bryndwr
+St Martins
+Beckenham
+Huntsbury
+Ilam
+Westburn
+Christchurch Central
+Hagley
+Styx
+Parklands
+St Albans NorthMairehau
+Sydenham
+Waltham
+Hornby
+Islington
+Hei Hei
+ddington
+Sawyers Arms
+Northcote
+Belfast
+North Beach
+New Brighton
+Southshore
+Merivale
+St Albans West
+Linwood
+Phillipstown
+Halswell
+Wigram
+Hillmorton
+Hoon Hay
+Bishopdale
+Papanui
+Aranui
+Bromley
+Bexley
+St Albans East
+Edgeware
+Richmond
+Avonside
+Sockburn
+Uppr Riccarton
+Spreydon
+Somerfield
+Burnside
+Harewood
+Woolston
+Opawa
+Richmond
+Shirley
+Burwood
+Dallington
+Avondale
+Riccarton
+Westmorland
+Cashmere
+Barrington
+Avonside

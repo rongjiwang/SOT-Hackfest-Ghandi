@@ -1,23 +1,23 @@
 Te Kowhai
-,St Andrews
-,Queenwood
-,Hillcrest
-,Silverdale
-,Tamahere
-,Hamilton East
-,University
-,Deanwell
-,Melville
-,Fitzroy
-,Fairfield
-,Fairview Downs
-,Hamilton Central
-,Maeroa
-,Frankton Junction
-,Claudelands
-,Dinsdale South
-,Frankton
-,Flagstaff
-,Rototuna
-,Dinsdale North
-,Nawton
+St Andrews
+Queenwood
+Hillcrest
+Silverdale
+Tamahere
+Hamilton East
+University
+Deanwell
+Melville
+Fitzroy
+Fairfield
+Fairview Downs
+Hamilton Central
+Maeroa
+Frankton Junction
+Claudelands
+Dinsdale South
+Frankton
+Flagstaff
+Rototuna
+Dinsdale North
+Nawton
