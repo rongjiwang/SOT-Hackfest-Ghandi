@@ -1,12 +1,13 @@
 from urllib import request
 from bs4 import BeautifulSoup
 import re
+import json
+
 
 def get_in_city_index(city_list, lineStrip):
     inIndex = None
     cityIndex = None
     for city in city_list:
-        print(lineStrip)
         if city in lineStrip:
             cityIndex = lineStrip.index(city)
             inIndex = lineStrip.index("in")
@@ -19,23 +20,33 @@ def get_areas(areas):
 
 city_list = ['auckland', 'wellington','christchurch',\
              'hamilton', 'nelson','napier' ,'hastings', 'dunedin',\
-             'palmerston north', 'rotorua', 'new plymouth', 'whangarei', 'invercargill', 'gisborne', 'whanganui']
+             'palmerston north', 'rotorua', 'new plymouth', 'whangarei', 'invercargill', 'gisborne']
 
 sub_list_auckland = ['Royal Oak', '']
+visited = set()
+data = ""
 
+
+data += "{"
 for c in city_list:
+    print(data)
+    data += "["
+    data += "city: ".format(c)
+    data += "{"
+    data += "name : " + c
+
+
     f = open("subs_"+c+".txt","r")
-    for sub in f.split(","):
-        tendencyURL = "https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/?location=newlands&period=60&action_doSearchValues=Find+Rent"
+    file = f.read()
+
+    for sub in re.sub("\W+", " ", file).split(" "):
+        tendencyURL = "https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/?location="+sub+"&period=60&action_doSearchValues=Find+Rent"
 
 
         page = request.urlopen(tendencyURL)
-
         soup = BeautifulSoup(page, "html.parser")
-
+        generalData = soup.find("ul", {"class": "list_semantic list_values"})
         allH3 = soup.findAll("h3")
-
-
 
         areas = list()
         for line in allH3:
@@ -47,13 +58,27 @@ for c in city_list:
                     inIndex = lineSplit.index("in") + 1
                     areas = lineSplit[inIndex: cityIndex]
                     break
-        print(areas)
 
-        generalData = soup.find("ul", { "class" : "list_semantic list_values" })
-        allTables = soup.findAll("table")
+        if areas != [] and str(areas) not in visited:
+            data += "areas: ["
+            prices = list()
+            for line in generalData.findAll("span"):
+                prices.append(line.string.replace("$", ""))
+            for area in areas:
+                data += "{" \
+                        "name : {}" \
+                       "bonds : {}," \
+                       "lower: {}," \
+                       "median: {}," \
+                       "upper: {}" \
+                       "},".format(area,prices[0],prices[1],prices[2],prices[3])
+            visited.add(str(areas))
+            data += "],"
+    data += "],"
+data += "}"
 
 
-        prices = list()
-for line in generalData.findAll("span"):
-    prices.append(line.string.replace("$",""))
-print(prices)
+
+jsonFile = open('data.json', 'w')
+json.dump(data, jsonFile, ensure_ascii=False)
+jsonFile.close()
