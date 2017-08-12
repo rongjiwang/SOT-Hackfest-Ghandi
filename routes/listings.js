@@ -28,4 +28,29 @@ function parseData(data) {
 }
 
 
+function calcAvgRent(data, district) {
+
+    var avgRent = new Map();
+    for(var i = 0; i< data.List.length; i++){
+        var suburb = data.List[i].Suburb;
+        var rent = data.List[i].RentPerWeek;
+        var count = 0;
+        var rent = 0;
+
+        if(myMap.get(suburb) != 'underfined'){
+            var count = myMap.get(suburb).value.count;
+            var sum = myMap.get(suburb).value.sum;
+        }
+
+        count = count + 1;
+        sum = sum + sum;
+
+        var obj = {count: count, rentSum: sum}
+
+        avgRent.set(suburb, obj);
+
+    }
+}
+
+
 module.exports = router;
