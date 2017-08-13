@@ -79,3 +79,81 @@ block content
                 li
                   a(href='javascript:void(0)') »
 
+    #container(style='width: 75%;')
+      canvas#canvas
+
+    script.
+        //var petMap = JSON.parse(("#{JSON.stringify(properties[0])}"));
+        //console.log(!{JSON.stringify(properties)});
+        var fake_data = {
+            "region": "auckland",
+            "areas": [
+                {
+                    "suburb": "harbourside",
+                    "trademeAvg": "243",
+                    "comparison": "-50"
+                },
+                {
+                    "suburb": "st lukes",
+                    "trademeAvg": "243",
+                    "comparison": "50"
+                },
+                {
+                    "suburb": "sandringham",
+                    "trademeAvg": "243",
+                    "comparison": "98"
+                }
+
+            ]
+        };
+        console.log(fake_data.areas);
+        var prop = !{JSON.stringify(properties)};
+        //var color = Chart.helpers.color;
+        var color = d3.scaleLinear().domain([-100, 100]).range(["yellow", "purple"]);
+        var label = [];
+        var data = [];
+        var colors = [];
+        var area_data = fake_data.areas;
+        for(var i=0; i<area_data.length; i++){
+                colors.push(color(area_data[i].comparison));
+                label.push(area_data[i].suburb);
+                data.push(area_data[i].trademeAvg);
+                console.log(i);
+            var horizontalBarChartData = {
+
+                labels: label,
+                datasets: [{
+                    label: fake_data.region,
+                    //backgroundColor: color(window.chartColors.blue).alpha(0.5).rgbString(),
+                    backgroundColor: colors,
+                    borderColor: window.chartColors.red,
+                    borderWidth: 1,
+                    data: data
+                }]
+            };
+        }
+        window.onload = function () {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myHorizontalBar = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: horizontalBarChartData,
+                options: {
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'right',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Wellington City Renting Market Analysis'
+                    }
+                }
+            });
+        };
+
