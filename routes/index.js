@@ -21,7 +21,7 @@ function parseTMData(data) {
     var filtered_data = {};
     var list = data.List;
     var tradeMeObj = getJSON(data, 'Wellington');
-    var finalData = compareData(tradeMeObj);
+    var finalData = compareData(tradeMeObj, 'wellington');
     /*for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
@@ -70,9 +70,9 @@ function getJSON(data, region) {
 
 }
 
-function compareData(tradeMe){
+function compareData(tradeMe, region){
 
-    var tenancy = (getTenancyRegion('wellington'));
+    var tenancy = (getTenancyRegion(region));
     var count = 0;
     var totalCount = 0;
     var areas = [];
