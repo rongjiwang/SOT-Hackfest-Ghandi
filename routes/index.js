@@ -82,7 +82,7 @@ function compareData(tradeMe){
     for (var i = 0; i < tradeMe['areas'].length; i++){
         for (var j = 0; j < tenancy.length; j++){
 
-            if(tradeMe['areas'][i]['suburb'] === tenancy[j]['suburb']){
+            if(tenancy[j]['suburb'].includes(tradeMe['areas'][i]['suburb'])){
             }
         }
     }
