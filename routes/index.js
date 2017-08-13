@@ -20,7 +20,10 @@ function parseTMData(data) {
     var filtered_data = {};
     var list = data.List;
     var tradeMeObj = getJSON(data, 'Wellington');
+<<<<<<< HEAD
     compareData(tradeMeObj);
+=======
+>>>>>>> ad27169e2707385e9871bc9b9334c29231fe74dc
     for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
@@ -85,9 +88,6 @@ function compareData(tradeMe){
     }
     console.log('count = ' + count);
     console.log('total count = ' + totalCount);
-
-
-
 
 
 }
