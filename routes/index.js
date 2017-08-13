@@ -85,7 +85,10 @@ function compareData(tradeMe){
             if(a.includes(b)){
                 var TMavg = tradeMe['areas'][i]['avg'];
                 var Tavg = tenancy[j]['median'];
-                var c = TMavg - Tavg;
+                var p = 200;
+                var c = (TMavg - Tavg) / TMavg * 100;
+                c = Math.round(c);
+
 
                 var area = {
                     suburb: tradeMe['areas'][i]['suburb'],
