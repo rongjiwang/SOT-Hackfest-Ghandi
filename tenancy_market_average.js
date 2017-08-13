@@ -122,7 +122,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_roskill",
+                    "suburb": "mount_roskill",
 
                     "bond": "117",
 
@@ -248,7 +248,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_eden",
+                    "suburb": "mount_eden",
 
                     "bond": "393",
 
@@ -304,7 +304,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_albert",
+                    "suburb": "mount_albert",
 
                     "bond": "264",
 
@@ -612,7 +612,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_wellington_south",
+                    "suburb": "mount_wellington_south",
 
                     "bond": "188",
 
@@ -626,7 +626,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_wellington_north",
+                    "suburb": "mount_wellington_north",
 
                     "bond": "183",
 
@@ -832,7 +832,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_victoria/roseneath",
+                    "suburb": "mount_victoria/roseneath",
 
                     "bond": "380",
 
@@ -1098,7 +1098,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_cook",
+                    "suburb": "mount_cook",
 
                     "bond": "805",
 
@@ -2460,7 +2460,7 @@ var market_averages =
 
                 {
 
-                    "suburb": "mt_mera",
+                    "suburb": "mount_mera",
 
                     "bond": "82",
 
@@ -3218,7 +3218,6 @@ function getTenancyRegion(region){
             list.push(market_averages[i]['areas']);
         }
     }
-    console.log(list);
     return list[0];
 }
 

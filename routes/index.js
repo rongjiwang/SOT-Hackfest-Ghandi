@@ -7,6 +7,7 @@ var listingsService = require('../services/listings.service');
 router.get('/', function(req, res, next) {
     listingsService.getListings(function(data) {
         var newData = parseTMData(data);
+        console.log(newData);
         res.render('index', { properties: newData });
     });
 });
@@ -20,11 +21,8 @@ function parseTMData(data) {
     var filtered_data = {};
     var list = data.List;
     var tradeMeObj = getJSON(data, 'Wellington');
-<<<<<<< HEAD
-    compareData(tradeMeObj);
-=======
->>>>>>> ad27169e2707385e9871bc9b9334c29231fe74dc
-    for(var i=0; i<list.length; i++){
+    var finalData = compareData(tradeMeObj);
+    /*for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
         array_list.push(list[i].Suburb);
@@ -33,8 +31,8 @@ function parseTMData(data) {
 
 
         filtered_data[i] = array_list;
-    }
-    return filtered_data;
+    }*/
+    return finalData;
 }
 
 function getJSON(data, region) {
@@ -62,6 +60,7 @@ function getJSON(data, region) {
 
     suburbData.forEach(function (item, key, mapObj) {
         var avg = (item.rentSum / item.count);
+        avg = Math.round(avg);
         var area = {suburb: key, avg: avg};
         areas.push(area);
     });
@@ -76,21 +75,36 @@ function compareData(tradeMe){
     var tenancy = (getTenancyRegion('wellington'));
     var count = 0;
     var totalCount = 0;
-
+    var areas = [];
 
 
     for (var i = 0; i < tradeMe['areas'].length; i++){
         for (var j = 0; j < tenancy.length; j++){
+            var a = tenancy[j]['suburb'].toLowerCase().split('_').join(' ');
+            var b = tradeMe['areas'][i]['suburb'].toLowerCase();
+            if(a.includes(b)){
+                var TMavg = tradeMe['areas'][i]['avg'];
+                var Tavg = tenancy[j]['median'];
+                var c = TMavg - Tavg;
 
-            if(tenancy[j]['suburb'].includes(tradeMe['areas'][i]['suburb'])){
+                var area = {
+                    suburb: tradeMe['areas'][i]['suburb'],
+                    trademeAvg: TMavg,
+                    comparison: c
+                };
+                areas.push(area);
             }
         }
     }
-    console.log('count = ' + count);
-    console.log('total count = ' + totalCount);
+
+    return {region: 'wellington', areas: areas};
+
 
 
 }
+
+
+
 
 
 module.exports = router;
