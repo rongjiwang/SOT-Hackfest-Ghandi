@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var getTenancyRegion = require('../tenancy_market_average');
 var listingsService = require('../services/listings.service');
 
 /* GET home page. */
@@ -19,6 +20,7 @@ function parseTMData(data) {
     var filtered_data = {};
     var list = data.List;
     var tradeMeObj = getJSON(data, 'Wellington');
+    compareData(tradeMeObj);
     for(var i=0; i<list.length; i++){
         var array_list = [];
         array_list.push(list[i].Address);
@@ -66,7 +68,27 @@ function getJSON(data, region) {
 
 }
 
-function compareData(data){
+function compareData(tradeMe){
+
+    var tenancy = (getTenancyRegion('wellington'));
+    var count = 0;
+    var totalCount = 0;
+
+
+
+    for (var i = 0; i < tradeMe['areas'].length; i++){
+        for (var j = 0; j < tenancy.length; j++){
+
+            if(tradeMe['areas'][i]['suburb'] === tenancy[j]['suburb']){
+            }
+        }
+    }
+    console.log('count = ' + count);
+    console.log('total count = ' + totalCount);
+
+
+
+
 
 }
 
