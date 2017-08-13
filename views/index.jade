@@ -7,77 +7,77 @@ block content
         .widget.stacked.widget-table.action-table
           .page-header
             h1
-              | Listing Suburbs
-          .row
-            .span2.side-by-side.clearfix
-            .span3.side-by-side.clearfix.offset4
-              form(action='/search', method='get')
-                .input-group
-                  input#system-search.form-control(name='',value='', placeholder='Search for', required='')
-                  span.input-group-btn
-                    button.btn.btn-default(type='submit', data-original-title='', title='')
-                      i.glyphicon.glyphicon-search
+              | Wellington Suburbs
+          //.row
+          //  .span2.side-by-side.clearfix
+          //  .span3.side-by-side.clearfix.offset4
+          //    form(action='/search', method='get')
+          //      .input-group
+          //        input#system-search.form-control(name='',value='', placeholder='Search for', required='')
+          //        span.input-group-btn
+          //          button.btn.btn-default(type='submit', data-original-title='', title='')
+          //            i.glyphicon.glyphicon-search
 
           br
           br
-          .widget-content
-            table.table.table-striped.table-bordered
-              thead
-                tr
-                  th#table_id
-                    | ID
-                  th(id='')
-                    | Address
-                  th(id='')
-                    | Suburb Name
-                  th(id='')
-                    | Properties
-                  th(id='')
-                    | Trademe Avg Rent
-                  th(id='')
-                    | Official Avg Rent
-                  th(id='')
-                    | Diff
-                  th(id='')
-                    | Rating
-                  th(id='')
-                    | View
-
-              tbody
-                for prop, i in properties
-                  tr
-                    td #{++i}
-                    td #{prop[0]}
-                    td #{prop[1]}
-                    td #{prop[2]}
-                    td #{prop[3]}
-                    td TODO
-                    td TODO
-                    td TODO
-                    td.td-actions
-                      a.btn.btn-default.btn-xs(href='javascript:;')
-                        span.glyphicon.glyphicon-search
-                        |  View
-          // /widget-content
-          .row
-            .col-md-12
-              ul.pagination.pagination-sm.pull-left
-                li.disabled
-                  a(href='javascript:void(0)') «
-                li.active
-                  a(href='javascript:void(0)')
-                    | 1
-                    span.sr-only (current)
-                li
-                  a(href='#') 2
-                li
-                  a(href='#') 3
-                li
-                  a(href='#') 4
-                li
-                  a(href='#') 5
-                li
-                  a(href='javascript:void(0)') »
+          //.widget-content
+          //  table.table.table-striped.table-bordered
+          //    thead
+          //      tr
+          //        th#table_id
+          //          | ID
+          //        th(id='')
+          //          | Address
+          //        th(id='')
+          //          | Suburb Name
+          //        th(id='')
+          //          | Properties
+          //        th(id='')
+          //          | Trademe Avg Rent
+          //        th(id='')
+          //          | Official Avg Rent
+          //        th(id='')
+          //          | Diff
+          //        th(id='')
+          //          | Rating
+          //        th(id='')
+          //          | View
+          //
+          //    tbody
+          //      for prop, i in properties
+          //        tr
+          //          td #{++i}
+          //          td #{prop[0]}
+          //          td #{prop[1]}
+          //          td #{prop[2]}
+          //          td #{prop[3]}
+          //          td TODO
+          //          td TODO
+          //          td TODO
+          //          td.td-actions
+          //            a.btn.btn-default.btn-xs(href='javascript:;')
+          //              span.glyphicon.glyphicon-search
+          //              |  View
+          //// /widget-content
+          //.row
+          //  .col-md-12
+          //    ul.pagination.pagination-sm.pull-left
+          //      li.disabled
+          //        a(href='javascript:void(0)') «
+          //      li.active
+          //        a(href='javascript:void(0)')
+          //          | 1
+          //          span.sr-only (current)
+          //      li
+          //        a(href='#') 2
+          //      li
+          //        a(href='#') 3
+          //      li
+          //        a(href='#') 4
+          //      li
+          //        a(href='#') 5
+          //      li
+          //        a(href='javascript:void(0)') »
 
     #container(style='width: 75%;')
       canvas#canvas
@@ -85,7 +85,7 @@ block content
     script.
         //var petMap = JSON.parse(("#{JSON.stringify(properties[0])}"));
         //console.log(!{JSON.stringify(properties)});
-        var fake_data = {
+        var fake_data1 = {
             "region": "auckland",
             "areas": [
                 {
@@ -106,8 +106,7 @@ block content
 
             ]
         };
-        console.log(fake_data.areas);
-        var prop = !{JSON.stringify(properties)};
+        var fake_data = !{JSON.stringify(properties)};
         //var color = Chart.helpers.color;
         var color = d3.scaleLinear().domain([-100, 100]).range(["yellow", "purple"]);
         var label = [];
