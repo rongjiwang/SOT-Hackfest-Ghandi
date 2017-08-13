@@ -1,0 +1,20 @@
+{
+    "region": "auckland",
+    "areas": [
+      {
+        "suburb": "harbourside",
+        "trademeAvg": "243",
+        "comparison": "6"
+      },
+      {
+        "suburb": "st lukes",
+        "trademeAvg": "243",
+        "comparison": "5"
+      },
+      {
+        "suburb": "sandringham",
+        "trademeAvg": "243",
+        "comparison": "3"
+      }
+
+    ]}
